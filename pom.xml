@@ -8,21 +8,29 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.3</version>
+		<version>3.1.2</version>
 		<relativePath/>
 	</parent>
 
 	<version>0.0.1-SNAPSHOT</version>
+
 	<packaging>pom</packaging>
 	<name>pet-projects</name>
 	<description>Collection of pet projects for Spring</description>
 	<properties>
 		<java.version>17</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<!-- Logging -->
+		<logback.version>1.0.13</logback.version>
+		<slf4j.version>1.7.5</slf4j.version>
 	</properties>
 
 
 	<modules>
-<!--		<module>modules/atm</module>-->
+		<module>modules/atm/atm-ejb</module>
+		<module>modules/atm/atm-shared</module>
 		<module>application</module>
 	</modules>
 
@@ -30,13 +38,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
