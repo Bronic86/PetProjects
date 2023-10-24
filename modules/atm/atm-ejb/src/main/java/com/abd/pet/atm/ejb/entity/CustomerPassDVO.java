@@ -25,10 +25,10 @@ public class CustomerPassDVO {
     private CustomerDVO customer;
 
     @Column(name = "pwd", nullable = false)
-    private byte[] pwd;
+    private String pwd;
 
-    @Column(name = "change_ts", nullable = false)
-    private Timestamp changeTs;
+    @Column(name = "changed_ts", nullable = false)
+    private Timestamp changedTs;
 
     public Long getId() {
         return id;
@@ -46,19 +46,19 @@ public class CustomerPassDVO {
         this.customer = customer;
     }
 
-    public byte[] getPwd() {
+    public String getPwd() {
         return pwd;
     }
 
-    public void setPwd(byte[] pwd) {
+    public void setPwd(String pwd) {
         this.pwd = pwd;
     }
 
-    public Timestamp getChangeTs() {
-        return changeTs;
+    public Timestamp getChangedTs() {
+        return changedTs;
     }
 
-    public void setChangeTs(Timestamp changeTs) {
-        this.changeTs = changeTs;
+    public void setChangedTs(Timestamp changeTs) {
+        this.changedTs = changeTs;
     }
 }
